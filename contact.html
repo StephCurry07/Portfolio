@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="send(); reset(); return false">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required />
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit"> Send </button>
+    </form>
+      <script src=" https://smtpjs.com/v3/smtp.js"></script>
+      <script>
+        function send() {
+          Email.send({
+            Host: "smtp.gmail.com",
+            Username: "7important.work7@gmail.com",
+            Password: "importantqwerty",
+            To: "7important.work7@gmail.com",
+            From: document.getElementById('email').value,
+            Subject: document.getElementById('subject').value,
+            Body: "Name: " + document.getElementById('name') + "<br>"
+            + "Email: " + document.getElementById('email') + "<br>"
+            + "Subject: " + document.getElementById('subject') + "<br>" 
+            + "Message: " + document.getElementById("message").value
+          }).then((message) => alert(message));
+        }
+      </script>
+  </body>
+</html>
+
