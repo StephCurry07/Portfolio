@@ -1,0 +1,39 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.socials {
+    text-align: center;
+}
+
+.ring-container {
+    display: flex;
+}
+
+.icon-ring {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    /* Adjust the icon color as needed */
+    background-color: #3498db;
+    /* Change the background color as needed */
+    border-radius: 50%;
+    width: 60px;
+    /* Adjust the size of the icon container */
+    height: 60px;
+    border: 5px solid #3498db;
+    /* Adjust the border size and color */
+    margin: 10px;
+    /* Adjust the margin between icons */
+}
+
+.icon-ring i {
+    font-size: 24px;
+    /* Adjust the icon size */
+}

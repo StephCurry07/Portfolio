@@ -234,8 +234,7 @@ a:hover {
 .widget-sidebar .list-sidebar,
 .box-comments .list-comments,
 .blog-wrapper .post-meta ul,
-.list-ico,
-.socials ul {
+.list-ico {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0;
@@ -250,17 +249,10 @@ a:hover {
   margin-right: 10px;
 }
 
-/*------/ Ico Circle /------*/
-.ico-circle {
-  height: 100px;
-  width: 100px;
-  font-size: 2rem;
-  border-radius: 50%;
-  line-height: 1.55;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
-  display: block;
+.ring-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 /*------/ Owl Carousel /------*/
@@ -485,7 +477,7 @@ a:hover {
   position: relative;
 }
 
-.navbar > ul > li {
+.navbar>ul>li {
   white-space: nowrap;
   padding: 10px 0 10px 30px;
 }
@@ -513,7 +505,7 @@ a:hover {
   margin-left: 5px;
 }
 
-.navbar > ul > li > a:before {
+.navbar>ul>li>a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -527,7 +519,7 @@ a:hover {
 }
 
 .navbar a:hover:before,
-.navbar li:hover > a:before,
+.navbar li:hover>a:before,
 .navbar .active:before {
   visibility: visible;
   width: 80%;
@@ -536,7 +528,7 @@ a:hover {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #fff;
 }
 
@@ -572,11 +564,11 @@ a:hover {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
   color: #0078ff;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -588,7 +580,7 @@ a:hover {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -600,7 +592,7 @@ a:hover {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
@@ -882,10 +874,7 @@ a:hover {
   position: relative;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -893,10 +882,7 @@ a:hover {
   border: 1px solid #0078ff;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #0078ff;
 }
 
@@ -919,7 +905,7 @@ a:hover {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1045,7 +1031,8 @@ a:hover {
 
 /* Add some basic styles for the section */
 .blogs-section {
-  background-image: url("placeholder-image.jpg"); /* Replace with your image URL */
+  background-image: url("placeholder-image.jpg");
+  /* Replace with your image URL */
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -1067,7 +1054,8 @@ a:hover {
 .read-more-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #ff5722; /* Change the color to match your website's theme */
+  background-color: #ff5722;
+  /* Change the color to match your website's theme */
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -1076,21 +1064,31 @@ a:hover {
 }
 
 .section-title:hover {
-  color: #ff5722; /* Change the color on hover */
-  animation: bounce 0.5s ease infinite; /* Add a bounce animation */
+  color: #ff5722;
+  /* Change the color on hover */
+  animation: bounce 0.5s ease infinite;
+  /* Add a bounce animation */
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
   }
+
   40% {
-      transform: translateY(-10px);
+    transform: translateY(-10px);
   }
+
   60% {
-      transform: translateY(-5px);
+    transform: translateY(-5px);
   }
 }
+
 /*------/ End blog / --------*/
 
 /*------/ Comments /------*/

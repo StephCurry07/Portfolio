@@ -228,9 +228,9 @@
                         What excites me the most is the power of technology to solve real-world problems. I'm driven by the endless possibilities of innovation and the opportunity to make a positive impact on people's lives through my work.
                         My technical expertise includes:
                         <ul>
-                            <li><strong>Programming Languages:</strong> [List languages you're proficient in]</li>
-                            <li><strong>Frameworks and Libraries:</strong> [List relevant frameworks and libraries]</li>
-                            <li><strong>Database Management:</strong> [Specify your database skills]</li>
+                            <li><strong>Programming Languages:</strong> Java, C++, C, Python, Javascript, Rust</li>
+                            <li><strong>Frameworks and Libraries:</strong> React, Node</li>
+                            <li><strong>Database Management:</strong> MySQL, MongoDB</li>
                             <li><strong>Version Control:</strong> Git/GitHub</li>
                         </ul>
                         </p>
@@ -404,7 +404,7 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="w-like">
-                        <a href="portfolio-details.html">
+                        <a href="wd2.html">
                           <span class="bi bi-plus-circle"></span
                         ></a>
                       </div>
@@ -434,7 +434,7 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="w-like">
-                        <a href="portfolio-details.html">
+                        <a href="wd3.html">
                           <span class="bi bi-plus-circle"></span
                         ></a>
                       </div>
@@ -464,7 +464,7 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="w-like">
-                        <a href="portfolio-details.html">
+                        <a href="wd4.html">
                           <span class="bi bi-plus-circle"></span
                         ></a>
                       </div>
@@ -494,7 +494,7 @@
                     </div>
                     <div class="col-sm-4">
                       <div class="w-like">
-                        <a href="portfolio-details.html">
+                        <a href="wd5.html">
                           <span class="bi bi-plus-circle"></span
                         ></a>
                       </div>
@@ -818,38 +818,14 @@
                           <li> <span class="bi bi-envelope"></span> apoorv.gupta65@gmail.com </li>
                         </ul>
                       </div>
-                      <div class="socials">
-                        <ul>
-                          <!-- <li><a href=""><span class="ico-circle"><i class="bi bi-facebook"></i></span></a></li>
-                        <li><a href=""><span class="ico-circle"><i class="bi bi-instagram"></i></span></a></li> -->
-                          <li>
-                            <a href="https://wa.me/918923159134">
-                              <span class="ico-circle"
-                                ><i class="bi bi-whatsapp"></i></span
-                            ></a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://discordapp.com/users/818898604609110106"
-                              ><span class="ico-circle"
-                                ><i class="bi bi-discord"></i></span
-                            ></a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://www.linkedin.com/in/apoorv-gupta07/"
-                              ><span class="ico-circle"
-                                ><i class="bi bi-linkedin"></i></span
-                            ></a>
-                          </li>
-                          <li>
-                            <a
-                              href="https://medium.com/@apoorvgupta-07/"
-                              ><span class="ico-circle"
-                                ><i class="bi bi-medium"></i></span
-                            ></a>
-                          </li>
-                        </ul>
+                      <div id="social-icons-container"></div>
+                        <script>
+                          fetch('social.html')
+                            .then(response => response.text())
+                            .then(html => {
+                              document.getElementById('social-icons-container').innerHTML = html;
+                            })
+                        </script>
                       </div>
                     </div>
                   </div>
