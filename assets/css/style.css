@@ -203,30 +203,37 @@ a:hover {
 
 /*------/ Socials /------*/
 .socials {
-  padding: 1.5rem 0;
+  text-align: center;
 }
 
-.socials ul li {
-  display: inline-block;
+.ring-container {
+  display: flex;
 }
 
-.socials .ico-circle {
-  height: 40px;
-  width: 40px;
-  font-size: 1.2rem;
+.icon-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  background-color: #3498db;
   border-radius: 50%;
-  line-height: 1.6;
-  margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #0078ff;
-  transition: all 500ms ease;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #3498db;
+  margin: 10px;
 }
 
-.socials .ico-circle:hover {
-  background-color: #0078ff;
-  color: #fff;
-  box-shadow: 0 0 0 3px #cde1f8;
-  transition: all 500ms ease;
+.icon-ring i {
+  font-size: 24px;
+  /* Adjust the icon size */
 }
+
+a.icon-ring :hover {
+  transition: 0.7s ease;
+  color : white;
+}
+
 
 /*------/ Ul resect /------*/
 .ul-resect,
