@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: #f2f2f2;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 8px;
+    width: 90%;
+    background-color: #fff;
+}
+
+.game {
+    margin-top: 10px;
+}
+
+.subcard {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 2px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #3498db;
+}
+
+h3 {
+    color: #2ecc71;
+    margin-top: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+    color: solid black;
+}
+
+.profile-link {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.profile-link:hover {
+    background-color: #2ecc71;
+}
+
+.snaps {
+    padding-top: 5px;
+    height: 50%;
+    width: 50%;
+}
+
+.slider img {
+    width: 100%;
+}
+
+.snaps .slider .swiper-pagination {
+    margin-top: 2px;
+    position: relative;
+}
+
+.slider .swiper-pagination .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #0078ff;
+}
+
+.slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #0078ff;
+}
