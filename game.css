@@ -45,6 +45,7 @@ p {
 
 .profile-link {
     display: inline-block;
+    margin-left: 40.5%;
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
@@ -58,6 +59,7 @@ p {
 }
 
 .snaps {
+    padding-left: 22%;
     padding-top: 5px;
     height: 50%;
     width: 50%;
@@ -82,4 +84,8 @@ p {
 
 .slider .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #0078ff;
+}
+
+a{
+    margin-left: 36vw;
 }
