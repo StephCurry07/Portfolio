@@ -86,6 +86,14 @@ p {
     background-color: #0078ff;
 }
 
+.swiper-slide.custom-size img {
+    /* Adjust the width and height as needed */
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 25%;
+}
+
+
 a{
     margin-left: 36vw;
 }
