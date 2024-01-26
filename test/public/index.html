@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Example</title>
+</head>
+<body>
+
+    <h1>API Example</h1>
+
+    <div id="apiData">
+        <!-- API data will be displayed here -->
+    </div>
+
+    <script>
+        // Fetch data from the server-side API endpoint
+        fetch('/api/data')
+            .then(response => response.json())
+            .then(apiData => {
+                // Display the API data on the client side
+                const apiDataElement = document.getElementById('apiData');
+                apiDataElement.textContent = JSON.stringify(apiData, null, 2);
+            })
+            .catch(error => console.error('Error fetching API data:', error));
+    </script>
+
+</body>
+</html>
