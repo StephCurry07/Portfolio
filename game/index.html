@@ -17,7 +17,7 @@
             <div class="subcard">
                 <h3>Clash of Clans</h3>
                 <p>
-                    I started it in class 11th when my friends talked about playing the game. It was summer and I installed it so that I can also enjoy the conversations they were having. I have a Town Hall level 12 and a Builder Hall level 9. I'm currently in Master League II, in a clan with my friends. With an experience level of 179, I have accumulated a total of 3,154 builder trophies, and also reached Legend League with TH10, showcasing my prowess in both regular and Builder Base attacks. A seasoned participant in Clan Wars, I have secured <span id="warStars">0</span> war stars and actively engage in competitive trophy pushing, illustrating my commitment to strategic gameplay.</p>
+                    I started it in class 11th when my friends talked about playing the game. It was summer and I installed it so that I can also enjoy the conversations they were having. I have a Town Hall level <span id="th"></span> and a Builder Hall level <span id="bh"></span>. I'm currently in <span id="league"></span>, in a clan with my friends. With an experience level of <span id="exp"></span>, I have accumulated a total of <span id="bbt"></span> builder trophies, with an all time best of 3899 and also reached Legend League with TH10, showcasing my prowess in both regular and Builder Base attacks. A seasoned participant in Clan Wars, I have secured <span id="warStars">0</span> war stars and actively engage in competitive trophy pushing, illustrating my commitment to strategic gameplay.</p>
                     <section class="snaps">
                         <div class="slider swiper">
                             <div class="swiper-wrapper align-items-center">
@@ -45,7 +45,7 @@
         <div class="game">
             <div class="subcard"> 
                 <h3>Brawl Stars</h3>
-                <p>It launched in December(India) when I was in class 12th. I installed it the next day after it launched. Made my friends installed and had fun. I currently have around 23000 trophies. I stopped playing due to academic and career reasons as I became a bit competitive here. I was trophy pushing whole night while I had to give JEE exam. I deleted it from my phone so that I don't play, asked my mom for her phone as I installed it there. Once I was India rank 27 with Shelly and similar under 100 with Bull and Jacky as well. My mom told me once 'itna hi pdhai mein bhi karlo', then it hit me hehe. Now, so many brawlers and many new things are there. But they recently also changed the theme musiccc.</p>
+                <p>It launched in December(India) when I was in class 12th. I installed it the next day after it launched. Made my friends installed and had fun. I currently have around <span id="trophies"></span> trophies. I stopped playing due to academic and career reasons as I became a bit competitive here. I was trophy pushing whole night while I had to give JEE exam. I deleted it from my phone so that I don't play, asked my mom for her phone as I installed it there. Once I was India rank 27 with Shelly and similar under 100 with Bull and Jacky as well. My mom told me once 'itna hi pdhai mein bhi karlo', then it hit me hehe. Now, so many brawlers and many new things are there. But they recently also changed the theme musiccc.</p>
                 
                  </p>
                     <section class="snaps">
@@ -128,18 +128,37 @@
 
     <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+
     <script>
+
+        // COC
         document.addEventListener('DOMContentLoaded', () => {
           // Specify the endpoint you want to fetch data from
-          const endpoint = '/gamer'; // Adjust the endpoint based on your server setup
+          const endpoint = '/coc'; // Adjust the endpoint based on your server setup
           // Fetch JSON data from the server
           fetch(endpoint)
           .then(response => response.json())
           .then(data => {
+            document.getElementById('th').textContent = data.townHallLevel;
+            document.getElementById('bh').textContent = data.builderHallLevel;
+            document.getElementById('league').textContent = data.league.name;
+            document.getElementById('exp').textContent = data.expLevel;
+            document.getElementById('bbt').textContent = data.builderBaseTrophies;
             document.getElementById('warStars').textContent = data.warStars;
           })
           .catch(error => console.error('Error fetching JSON data from server:', error));
       });
+
+      // BS
+      document.addEventListener('DOMContentLoaded', () => {
+          const endpoint = '/bs';
+          fetch(endpoint)
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('trophies').textContent = data.trophies;
+          })
+          .catch(error => console.error('Error fetching JSON data from server:', error));
+        });
       </script>
     <!-- Template Main JS File -->
     <script src="../assets/js/main.js"></script>
